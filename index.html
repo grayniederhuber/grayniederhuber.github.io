@@ -7,24 +7,153 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Glitch&family=Six+Caps&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <style>
-        .hero {
-            padding: 1rem 0;
-            
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./backgroundimage.jpg') #000;
-            background-size: cover;
-            background-position: center;
-            
+        @font-face {
+            font-family: "Bully";
+            src: url(Bully/Bully.otf);
         }
 
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 1.3rem;
+        * {
+            font-family: 'Bully', sans-serif;
+            font-weight: 350;
         }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #2f2e34;
+            color: #e1e1e1;
+        }
+
+        h1 {
+            font-size: 90em;
+            background: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
+            color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: 1.5rem;
+            color: rgb(198, 198, 198);
+            z-index: 2;
+            font-family: 'Instrument Serif';
+        }
+
+        .hero-2 {
+            position: fixed;
+            display: flex;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*overflow: auto; */
+            background: lime; /* Just to visualize the extent */
+        }
+
+        .hero-container-2 {
+            position: fixed;
+            display: flex;
+            top: 8rem;
+            left: 0;
+            bottom: 5rem;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            background: #000000;
+            background-size: cover;
+            background-position: center;
+            font-size: 1.5vh;
+        }
+
+        .header {
+            background-color: black;
+            padding: 0.25rem 0;
+            padding-bottom: 1rem;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            font-family: 'Teko';
+            font-size: 5rem;
+        }
+
+        .footer {
+            margin-top: auto;
+            background-color: black;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .875rem;
+            z-index: 2;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 8rem;
+            font-size: 1.75rem;
+        }
+
+        .button-container a {
+            color: rgb(148, 148, 148);
+            border-radius: 12px;
+            padding: 0.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            
+            font-family: 'Playfair Display';
+            letter-spacing: 0.5rem;
+
+            transition-duration: 0.3s;
+        }
+
+        .button-container a:hover {
+            color: white;
+        }
+
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0rem;
+            box-shadow: rgba(0,0,0,0.56) 0px 35px 50px 4px;
+            background: transparent;
+            max-width: 93rem;
+            margin: auto;
+            z-index: 5;
+        }
+
+        .img-container {
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        .img-container img {
+            width: 31rem; 
+            height: 30rem; 
+            object-fit: none; 
+            opacity: 80%;
+        } 
+
+
+
+
+
 
         .divider {
             display: flex;
@@ -34,48 +163,16 @@
             height: 1rem;
         }
 
-        * {
-            font-family: 'Fira Sans Condensed', sans-serif;
-        }
-
-        body {
-            margin: 0;
-            background-color: #2f2e34;
-            color: #e1e1e1;
-        }
-
         .video-container {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
-        
-        .header {
-            background-color: rgb(0, 0, 0);
-            padding: 1rem 0;
-        }
 
-        .header-container {
-            display: flex;
-            justify-content:space-between;
-        }
-
-        .button-container {
+        .title-container {
             display: flex;
             gap: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .button-container a {
-            color: #ffffff;
-            border-radius: 12px;
-            padding: 0.5rem;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-decoration: none;
+            font-size: 2rem;
         }
 
         .contact-links a {
@@ -131,20 +228,7 @@
             aspect-ratio: 560 / 315;
             width: 50vw;
             max-width: 35rem;
-        }
-
-        .footer {
-            background-color: #202027;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: .875rem;
-        }
+        } 
 
         .spotify-container {
             display: flex;
@@ -207,185 +291,56 @@
             height: 100%;
         }
 
-        .a text {
+        /* .a text {
 
-        }
+        } */
     </style>
 </head>
 <body>
-    <header class="header">
+
+    <div class="header">
         <div class="constrained-container">
             <div class="header-container">
-                <div>
-                    <!-- <span>Header words</span> -->
-                </div>
-                <div class="button-container">
-                    <!--
-                    <a href="https://www.youtube.com/channel/UCgwNL1Z9qw5yU1ziUtWw8Ww">
-                        <i class="lab la-youtube"></i>
-                    </a>
-                    <a href="https://www.instagram.com/gray_ln_/">
-                        <i class="lab la-instagram"></i>
-                    </a>
-                    -->
-                    <a href="#PRODUCTION_PORTFOLIO">
-                        production porfolio
-                    </a>
-                    <a href="#BANDS">
-                        bands
-                    </a>
-                    <a href="#CONTACT">
-                        contact
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </header>
-    <div class="constrained-container hero">
-        <div class="hero-container">
-            <div>
-                <h1>
-                    Gray Laine
-                </h1>
-                <p>
-                    drummer, producer, guitarist
-                </p>
-            </div>
-            <div class="video-container">
-                <iframe class="video" src="https://www.youtube.com/embed/videoseries?si=MKBfrAe1YgKtKnmT&amp;list=OLAK5uy_mSdc6wmQl5dqT3RN0rqjiTD0kRrj9GPVE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/DpG2o7gj1TY?si=HBCAqwfj9uIXIw4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2> ORANGEVILLE PUNK EST. 2022 </h2>
             </div>
         </div>
     </div>
-
-    <a id="PRODUCTION_PORTFOLIO"></a>
-    <div class="constrained-container content">
-        <div class="content-container">
-            <h1>Production portfolio</h1>
-
-            <div class="spotify-container">
-                <div class="explanation">
-                    <h2>Dorene "Grandeur to Ghosts"</h2>
-                    <div class="bullet-container">
-                        <span>produced, engineered, and mixed by Gray Laine</span>
-                        <span>guitars, drums, and bass performed by Gray Laine</span>
-                        <span>recorded at Revel Studios</span>
-                        <span>vocals by Vince Eagan</span>
-                        <span>written by Vince Eagan</span>
-                    </div>
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/49p1oFFUtlprJdNrF1r80U?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <div class="spotify-container flipped">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2RkrCVKYZpAZPQhZopAjzx?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <div class="explanation">
-                    <h2>More production</h2>
-                    <div class="bullet-container">
-                        <span>all songs produced, engineered, and mixed by Gray Laine</span>
-                        <span>all songs recorded at Revel Studios</span>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="spotify-container">
-                <div class="explanation">
-                    <h2>Drums: 027</h2>
-                </div>
-                <div class="content-video-container-container">
-                    <div class="content-video-container">
-                        <iframe class="content-video" src="https://www.youtube.com/embed/sc08BuVxDcI?si=EqDDhBVr0fdvuPvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <a id="BANDS"></a>
-    <div class="constrained-container content">
-        <div class="content-container">
-            <h1>Bands</h1>
-
-            <div class="band-container">
-                <div class="explanation">
-                    <h2>027</h2>
-                    <div class="bullet-container">
-                        <span>drummer & producer</span>
-                    </div>
-                </div>
-                <div class="band-container-container">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3BrZ8rCxzj0MsDAlxKG2jT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe class="content-video" src="https://www.youtube.com/embed/sc08BuVxDcI?si=EqDDhBVr0fdvuPvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-            </div>
-            <div class="band-container">
-                <div class="explanation">
-                    <h2>Dorene</h2>
-                    <div class="bullet-container">
-                        <span>drummer, guitarist, producer</span>
-                    </div>
-                </div>
-                <div class="band-container-container">
-                    <iframe class="content-video" src="https://www.youtube.com/embed/iTD6prAmt3s?si=uKqMD99Sq5SG-9Pq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6WdtV6IaSkkdIj61jkOcKI?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="band-container">
-                <div class="explanation">
-                    <h2>Revelstoke</h2>
-                    <div class="bullet-container">
-                        <span>guitarist</span>
-                    </div>
-                </div>
-                <div class="band-container-container">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3MfpC6AZRI0A2pKQSLsw27?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe class="content-video" src="https://www.youtube.com/embed/videoseries?si=T2Db4IMP5vMSFUZi&amp;list=PLDKXmtzsgZTSRoZFyDLH5zY8aUiIC02Lb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-            <!-- <div class="spotify-container">
-                <div class="explanation">
-                    <h2>Drums: 027</h2>
-                </div>
-                <div class="content-video-container-container">
-                    <div class="content-video-container">
-                        <iframe class="content-video" src="https://www.youtube.com/embed/sc08BuVxDcI?si=EqDDhBVr0fdvuPvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-
-    <div class="divider"></div>
     
-    <a id="CONTACT"></a>
-    <div class="constrained-content-container">
-        <div class="content-container">
-            <h1>Contact</h1>
-            <div class="contact-links">
-                <a href="mailto:graylaine@gmail.com">
-                    <h2>
-                        graylaine@gmail.com
-                    </h2>
-                </a>
-                <a href="https://www.instagram.com/gray_ln_/">
-                    <h2>
-                        instagram
-                    </h2>
-                </a>
+    <div class="hero-container-2">
+        <div>
+            <h1> 0 2 7 </h1>
+        </div>
+    </div>
 
-
-            </div>
+    <div class="gallery-container">
+        <div class ="img-container">
+            
+            <img src="DSC_8965_resized.jpg" alt="">
+            <img src="100_2150_resized.jpg" alt="">
+            <img src="100_2173_resized.jpg" alt="">
         </div>
     </div>
     
     <footer class="footer">
         <div class="constrained-container">
             <div class="footer-container">
-                <span>
-                    &copy; Gray Laine 2024. All rights reserved.
-                </span>
+                <div class="button-container">
+                    <a href="merch.html">
+                        SHOWS
+                    </a>
+                    <a href="merch.html">
+                        MUSIC
+                    </a>
+                    <a href="merch.html">
+                        MERCH
+                    </a>
+                    <a href="merch.html">
+                        GALLERY
+                    </a>
+                    <a href="merch.html">
+                        FOLLOW
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
