@@ -7,23 +7,37 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Glitch&family=Six+Caps&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <style>
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 1.25rem;
+            color: rgb(255, 255, 255);
+            z-index: 2;
+            font-family: 'Playfair Display';
+        }
+
         .hero {
             padding: 1rem 0;
-            
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./backgroundimage.jpg') #000;
-            background-size: cover;
-            background-position: center;
+            background: transparent;
             
         }
 
         .hero-container {
+            position: fixed;
             display: flex;
+            top: 8rem;
+            left: 0;
+            bottom: 5rem;
+            width: 100%;
             align-items: center;
-            justify-content: space-between;
-            font-size: 1.3rem;
+            justify-content: center;
+            background: transparent;
+            background-size: cover;
+            background-position: center;
+            font-size: 1.5vh;
         }
 
         .divider {
@@ -40,8 +54,16 @@
 
         body {
             margin: 0;
-            background-color: #2f2e34;
-            color: #e1e1e1;
+            height: 100vh;
+            background-attachment: fixed;
+            /* display: flex;
+            flex-direction: column; */
+            background: url('./caleb_hardluck.jpg');
+            
+            background-size: cover;
+            background-position: center;
+
+            overflow-y: hidden;
         }
 
         .video-container {
@@ -51,23 +73,27 @@
         }
         
         .header {
-            background-color: rgb(0, 0, 0);
-            padding: 1rem 0;
+            background-color:transparent;
+            padding: 2rem 0 0;
+            
         }
 
         .header-container {
             display: flex;
-            justify-content:space-between;
+            justify-content: center;
+            align-items: center;
+            font-size: .875rem;
+            z-index: 2;
         }
 
         .button-container {
             display: flex;
-            gap: 1rem;
-            font-size: 1.2rem;
+            gap: 8rem;
+            font-size: 1.75rem;
         }
 
         .button-container a {
-            color: #ffffff;
+            color: rgb(144, 159, 151);
             border-radius: 12px;
             padding: 0.5rem;
 
@@ -76,6 +102,16 @@
             align-items: center;
 
             text-decoration: none;
+            
+            font-family: 'Playfair Display';
+            font-weight: 600;
+            letter-spacing: 0.5rem;
+
+            transition-duration: 0.3s;
+        }
+
+        .button-container a:hover {
+            color: white;
         }
 
         .contact-links a {
@@ -83,6 +119,21 @@
             text-align: center;
             justify-content: center;
             color: #7aa2ff;
+        }
+
+        .example::-webkit-scrollbar {
+            display:none;
+        }
+
+
+
+        .gigs-header {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+            padding-top: 0.25rem;
+            padding-bottom: 0.5rem;
         }
 
         .content {
@@ -94,10 +145,40 @@
             flex-direction: column;
             gap: 3rem;
             align-items: center;
-            padding-top: 3rem;
+            padding-top: 0.25rem;
             padding-bottom: 3rem;
-        
+            max-height: 75vh;
+            overflow-y: scroll;
+            scrollbar-width: none;
         }
+
+        .gig-container {
+            display: flex;
+            gap: 2rem;
+            text-align: center;
+            
+            max-width: 50rem;
+            width: 70%;
+            background: black;
+        }
+
+        table {
+            width: 90%;
+        }
+
+        td {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgb(235, 255, 244);
+            z-index: 2;
+            font-family: 'Playfair Display';
+        }
+
+        .tr1 td:nth-child(1), .tr2 td:nth-child(2), .tr3 td:nth-child(3) { text-align: right }
+        .tl1 td:nth-child(1), .tl2 td:nth-child(2), .tl3 td:nth-child(3) { text-align: left }
+        .tc1 td:nth-child(1), .tc2 td:nth-child(2), .tc3 td:nth-child(3) { text-align: center }
 
         .content-element-container {
             display: flex;
@@ -134,16 +215,18 @@
         }
 
         .footer {
-            background-color: #202027;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            margin-top: auto;
+            background-color: black;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
 
         .footer-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             font-size: .875rem;
+            z-index: 2;
         }
 
         .spotify-container {
@@ -231,18 +314,75 @@
                     <a href="index.html">
                         HOME
                     </a>
-                    <a href="#BANDS">
-                        bands
+                    <a href="merch.html">
+                        MERCH
                     </a>
-                    <a href="#CONTACT">
-                        contact
+                    <a href="music.html">
+                        MUSIC
+                    </a>
+                    <a href="gallery.html">
+                        GALLERY
+                    </a>
+                    <a href="music.html">
+                        FOLLOW
                     </a>
                 </div>
 
             </div>
         </div>
     </header>
-    <div class="constrained-container hero">
+
+    <div class="gigs-header">
+    </div>
+    
+    <div class="constrained-container content"> 
+        
+        <div class="content-container">
+            
+            <h1>UPCOMING SHOWS</h1>
+
+            <table class="tl1, tc2, tr3">
+                <tr>
+                  <td>January 31, 2025</td>
+                  <td>Doors Pub w/ Blosum, Hollow Core, Live Animals</td>
+                  <td>Hamilton, ON</td>
+                </tr>
+                <tr>
+                  <td>February 1, 2025</td>
+                  <td>Golden Apple w/ Absolutely You, Essential Letdowns, Gout </td>
+                  <td>Kitchener, ON</td>
+                </tr>
+                <tr>
+                    <td>February 8, 2025</td>
+                    <td>TBA</td>
+                    <td>TBA</td>
+                </tr>
+                <tr>
+                    <td>February 15, 2025</td>
+                    <td>The Union</td>
+                    <td>Kitchener, ON</td>
+                </tr>
+                <tr>
+                    <td>TBA</td>
+                </tr>
+                <tr>
+                    <td>TBA</td>
+                </tr>
+                <tr>
+                    <td>TBA</td>
+                </tr>
+                <tr>
+                    <td>TBA</td>
+                </tr>
+                <tr>
+                    <td>TBA</td>
+                </tr>
+            </table>
+
+        </div>
+    </div> 
+    
+    <!-- <div class="constrained-container hero">
         <div class="hero-container">
             <div>
                 <h1>
@@ -287,16 +427,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="spotify-container">
-                <div class="explanation">
-                    <h2>Drums: 027</h2>
-                </div>
-                <div class="content-video-container-container">
-                    <div class="content-video-container">
-                        <iframe class="content-video" src="https://www.youtube.com/embed/sc08BuVxDcI?si=EqDDhBVr0fdvuPvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -344,16 +474,7 @@
                     <iframe class="content-video" src="https://www.youtube.com/embed/videoseries?si=T2Db4IMP5vMSFUZi&amp;list=PLDKXmtzsgZTSRoZFyDLH5zY8aUiIC02Lb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
-            <!-- <div class="spotify-container">
-                <div class="explanation">
-                    <h2>Drums: 027</h2>
-                </div>
-                <div class="content-video-container-container">
-                    <div class="content-video-container">
-                        <iframe class="content-video" src="https://www.youtube.com/embed/sc08BuVxDcI?si=EqDDhBVr0fdvuPvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div> -->
+            
         </div>
     </div>
 
@@ -378,9 +499,9 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="constrained-container">
             <div class="footer-container">
                 <span>
@@ -388,7 +509,7 @@
                 </span>
             </div>
         </div>
-    </footer>
+    </footer> -->
     
 </body>
 </html>
