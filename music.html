@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>027-music</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Glitch&family=Six+Caps&family=Teko:wght@300..700&display=swap" rel="stylesheet">
@@ -19,36 +19,6 @@
             font-family: 'Playfair Display';
         }
 
-        .hero {
-            padding: 1rem 0;
-            background: transparent;
-            
-        }
-
-        .hero-container {
-            position: fixed;
-            display: flex;
-            top: 8rem;
-            left: 0;
-            bottom: 5rem;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-            background-size: cover;
-            background-position: center;
-            font-size: 1.5vh;
-        }
-
-
-        .divider {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #202027;
-            height: 1rem;
-        }
-
         * {
             font-family: 'Fira Sans Condensed', sans-serif;
         }
@@ -57,21 +27,26 @@
             margin: 0;
             height: 100vh;
             background-attachment: fixed;
-            /* display: flex;
-            flex-direction: column; */
             background: url('./caleb_hardluck.jpg');
-            
             background-size: cover;
             background-position: center;
-
             overflow-y: hidden;
         }
 
-        .video-container {
+        .video-container-L {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1rem;
+            width: 70%
+        }
+
+        .video-container-R {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+            width: 70%
         }
         
         .header {
@@ -140,22 +115,30 @@
 
         .music-container-1 {
             display: flex;
-            gap: 2rem;
-            text-align: right;
+            flex-direction: row;
+            align-items: top;
+            gap: 1rem;
             
-            max-width: 50rem;
+            max-width: 60rem;
             width: 70%;
         }
 
-
-
-
-
-        .contact-links a {
+        .yt {
+            position: relative;
             display: flex;
-            text-align: center;
-            justify-content: center;
-            color: #7aa2ff;
+            width: 100%;
+            height: 0;
+            margin: auto;
+            padding: 0% 0% 56.25%;
+            overflow: hidden
+        }
+
+        .yt iframe {
+            position: absolute;
+            top: 0; bottom: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         .content {
@@ -172,16 +155,6 @@
             max-height: 75vh;
             overflow-y: scroll;
             scrollbar-width: none;
-        }
-
-        .content-element-container {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            
-            width: 80%;
-            max-width: 40rem;
-            background-color: rgb(80, 82, 98);
         }
 
         .constrained-container {
@@ -221,60 +194,6 @@
             font-size: .875rem;
         }
 
-        
-
-        .band-container {
-            display: flex;
-            gap: 2rem;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-            width: 70%;
-        }
-
-        .band-container-container {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: space-between;
-            width: 70%;
-        }
-
-        .spotify-container.flipped {
-            text-align: left;
-            
-        }
-
-        .explanation {
-            flex-shrink: 0;
-            width: 30%;
-        }
-
-        .bullet-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-
-        }
-
-        .content-video-container-container {
-            flex-grow: 1;
-        }
-
-        .content-video-container {
-            background-color: #0c6a11;
-            padding: 1rem;
-            border-radius: 1rem;
-            flex-grow: 1;
-            aspect-ratio: 560 / 315;
-        }
-
-        .content-video {
-            border-radius: 1rem;
-            width: 100%;
-            height: 100%;
-        }
-
     </style>
 </head>
 <body>
@@ -308,14 +227,18 @@
             <h1>MUSIC</h1>
 
             <div class="music-container-1">
-                <div class="video-container">
+                <div class="video-container-L">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3BrZ8rCxzj0MsDAlxKG2jT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=667820850/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/" seamless><a href="https://027music.bandcamp.com/album/youre-not-supposed-to-know">You&#39;re Not Supposed To Know by 027</a></iframe>
+                    <iframe style="border: 0; width: 80%; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=667820850/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/" seamless><a href="https://027music.bandcamp.com/album/youre-not-supposed-to-know">You&#39;re Not Supposed To Know by 027</a></iframe>
                 </div>
                 
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wOrfxPuyzsc?si=myvJ5s-i5eft4-G5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pGEu0IKDoyY?si=wWiq5X4PeAHnRXIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container-R">
+                    <div class="yt">
+                        <iframe width="100vw" height="315" src="https://www.youtube.com/embed/wOrfxPuyzsc?si=myvJ5s-i5eft4-G5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="yt">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pGEu0IKDoyY?si=wWiq5X4PeAHnRXIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <div class="button-container-2">
                         <a href="https://www.youtube.com/channel/UCycUhttfrAABm1zbFH6D7Rw" target="_blank">
                             <img src="./youtubelogo2.png" style="width:4rem;height:4rem">
